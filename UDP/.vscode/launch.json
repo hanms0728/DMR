@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "/Users/hanmyeongseog/Desktop/학부연구생/DMR/코드/DMR2_trace_0901/UDP/Primary",
+      "program": "/Users/hanmyeongseog/Desktop/학부연구생/DMR/코드/DMR2_trace_0901/UDP/Primary/build/Debug/outDebug"
+    }
+  ]
+}
