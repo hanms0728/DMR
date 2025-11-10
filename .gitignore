@@ -1,0 +1,11 @@
+# macOS/IDE
+.DS_Store
+.vscode/
+
+# build / binary
+*.exe
+*.out
+*.o
+build/
+cmake-build-*/
+*.log
