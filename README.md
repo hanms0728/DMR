@@ -28,7 +28,7 @@
 # 2. lttng
 
 ```bash
-sudo lttng create DMR #새로운 녹화 파일을 만든다.
+sudo lttng create DMR --output=./trace #새로운 녹화 파일을 만든다.
 sudo lttng enable-event -k -a #kernel의 모든 부분을 추적한다.
 sudo lttng enable-event -u -a #user의 모든 부분을 추적한다.
 sudo lttng start #녹화를 시작한다.
