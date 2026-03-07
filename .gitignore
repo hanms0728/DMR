@@ -9,3 +9,12 @@
 build/
 cmake-build-*/
 *.log
+*.csv
+
+# trace data
+*-u-*/
+
+# docs (binary)
+*.docx
+*.pdf
+*.pptx
