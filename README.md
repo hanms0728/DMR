@@ -46,20 +46,6 @@ Secondary는 수신 즉시 임무를 대체 수행합니다.
   <img src="docs/images/cbit-sequence.png" alt="CBIT-Based Fault Recovery" width="500"/>
 </p>
 
-### Fault Types
-
-| Code | Fault | Recovery |
-|------|-------|----------|
-| 1 | 전원 절체 (Power Loss) | Heartbeat 기반 |
-| 2 | 미션 속도 저하 (WDT Timeout) | Heartbeat 기반 |
-| 3 | 통신 두절 (Communication Loss) | Heartbeat 기반 |
-| 4 | CPU 과열 (High Temperature) | CBIT Alert |
-| 5 | 급격한 온도 변화 (Rapid Temp Change) | CBIT Alert |
-| 6 | 메모리 접근 오류 (Memory Fault) | CBIT Alert |
-| 7 | 유휴 메모리 부족 (Low Memory) | CBIT Alert |
-| 8 | 전압 이상 (Voltage Fault) | CBIT Alert |
-| 9 | 급격한 전압 변화 (Rapid Voltage Change) | CBIT Alert |
-
 ## Project Structure
 
 ```
@@ -88,19 +74,8 @@ DMR/
 
 ### Wiring
 
-```
-        Primary Board              Secondary Board
-        ┌───────────┐              ┌───────────┐
-  GND   │  Pin 6  ──┼──────────────┼── Pin 6   │  GND
-  TX    │  Pin 8  ──┼──────────┐   │            │
-  RX    │  Pin 10 ──┼────────┐ │   │            │
-        └───────────┘        │ │   └───────────┘
-                             │ └────── Pin 10    RX
-                             └──────── Pin 8     TX
-```
-
-> UART: GPIO 핀 교차 연결 (TX↔RX)
-> UDP: LAN 케이블로 직접 연결
+- **UART**: GPIO 핀 교차 연결 (Primary TX↔Secondary RX, Primary RX↔Secondary TX, GND 공통)
+- **UDP**: LAN 케이블로 두 보드 직접 연결
 
 ## Quick Start
 
